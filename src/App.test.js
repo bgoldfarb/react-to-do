@@ -27,3 +27,7 @@ it('has the correct dom elements', () => {
   ])).to.equal(true)
 })
 
+it('has the correct div', () => {
+  const wrapper = shallow(<App />)
+  expect(wrapper.find('.user-input').exists()).to.equal(true)
+})

@@ -21,7 +21,7 @@ constructor(props){
 
   render() {
     return (
-      <div>
+      <div className = 'user-input'>
         <input value = {this.state.value} onChange = {this.handleChange}/>
 
       </div>
