@@ -46,7 +46,7 @@ constructor(props){
           <button onClick = {this.handleSubmit}> Submit </button>
           <List toDoListItems = {this.state.toDoListItems} />
           <div className = 'remove-button'>
-          <button  onClick = {this.removeItems}> Remove Items </button>
+          <button id = 'btn'  onClick = {this.removeItems}> Remove Items </button>
           </div>
       </div>
      
