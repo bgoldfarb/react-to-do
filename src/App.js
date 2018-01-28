@@ -19,11 +19,11 @@ constructor(props){
   }
 
   handleSubmit = (e) => {
-    e.preventDefault()
     this.setState({
       value: '',
       toDoListItems: [...this.state.toDoListItems, this.state.value]
     })
+    e.preventDefault()
 
   }
 
@@ -44,7 +44,7 @@ constructor(props){
           <h1> To Do List </h1>
           <input value = {this.state.value} onChange = {this.handleChange}/>
           <button onClick = {this.handleSubmit}> Submit </button>
-          <List toDoListItems = {this.state.toDoListItems} />
+          <List toDoListItems = {this.state.toDoListItems}/>
           <div className = 'remove-button'>
           <button id = 'btn'  onClick = {this.removeItems}> Remove Items </button>
           </div>

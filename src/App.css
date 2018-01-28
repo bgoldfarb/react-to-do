@@ -8,3 +8,9 @@
   padding: 20px;
 
 }
+
+.remove-item-btn{
+  color:red;
+  position: relative;
+  margin-left: 15px;
+}
