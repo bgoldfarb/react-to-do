@@ -27,6 +27,13 @@ constructor(props){
     console.log([...this.state.toDoListItems, this.state.value])
   }
 
+  removeItems = () => {
+    this.setState({
+      value: '',
+      toDoListItems: []
+    })
+  }
+
 
 
   render() {
@@ -36,6 +43,9 @@ constructor(props){
           <input value = {this.state.value} onChange = {this.handleChange}/>
           <button onClick = {this.handleSubmit}> Submit </button>
           <List toDoListItems = {this.state.toDoListItems} />
+          <div className = 'remove-button'>
+          <button  onClick = {this.removeItems}> Remove Items </button>
+          </div>
       </div>
      
     );

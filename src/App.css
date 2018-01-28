@@ -2,3 +2,9 @@
   text-align: center;
 }
 
+.remove-button {
+  margin: auto;
+  position: relative;
+  padding: 20px;
+
+}
