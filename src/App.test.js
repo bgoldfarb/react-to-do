@@ -48,9 +48,13 @@ it('has the correct dom elements', () => {
         <input />
         <button> Submit </button>
         <List />
+        <div>
+          <button> Remove Items </button>
+        </div>
   </div>
   ])).to.equal(true)
 })
 
 
 })
+
