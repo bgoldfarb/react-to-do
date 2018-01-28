@@ -24,7 +24,7 @@ constructor(props){
       value: '',
       toDoListItems: [...this.state.toDoListItems, this.state.value]
     })
-    console.log([...this.state.toDoListItems, this.state.value])
+
   }
 
   removeItems = () => {
@@ -33,6 +33,8 @@ constructor(props){
       toDoListItems: []
     })
   }
+
+
 
 
 
