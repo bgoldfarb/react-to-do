@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import List from '../src/List'
 
 class App extends Component {
 
@@ -17,17 +18,28 @@ constructor(props){
     })
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault()
+    this.setState({
+      value: '',
+      toDoListItems: [...this.state.toDoListItems, this.state.value]
+    })
+  }
+
 
 
   render() {
     return (
       <div className = 'user-input'>
-        <input value = {this.state.value} onChange = {this.handleChange}/>
-
+        
+          <input value = {this.state.value} onChange = {this.handleChange}/>
+          <button onClick = {this.handleSubmit}> Submit </button>
+          <List toDoListItems = {this.state.toDoListItems} />
       </div>
      
     );
   }
+  
 }
 
 export default App;
