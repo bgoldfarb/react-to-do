@@ -42,7 +42,9 @@ it('has the correct div', () => {
 it('has the correct dom elements', () => {
   const wrapper = shallow(<App />)
   expect(wrapper.containsAllMatchingElements([
+   
   <div>
+     <h1> To Do List </h1>
         <input />
         <button> Submit </button>
         <List />

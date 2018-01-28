@@ -12,18 +12,19 @@ constructor(props){
     }
   }
 
-  handleChange = (event) => {
+  handleChange = (e) => {
     this.setState({
-      value: event.target.value
+      value: e.target.value
     })
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault()
+  handleSubmit = (e) => {
+    e.preventDefault()
     this.setState({
       value: '',
       toDoListItems: [...this.state.toDoListItems, this.state.value]
     })
+    console.log([...this.state.toDoListItems, this.state.value])
   }
 
 
@@ -31,7 +32,7 @@ constructor(props){
   render() {
     return (
       <div className = 'user-input'>
-        
+          <h1> To Do List </h1>
           <input value = {this.state.value} onChange = {this.handleChange}/>
           <button onClick = {this.handleSubmit}> Submit </button>
           <List toDoListItems = {this.state.toDoListItems} />
