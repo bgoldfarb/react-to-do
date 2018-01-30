@@ -42,7 +42,7 @@ it('has the correct dom elements', () => {
   <div>
      <h1> To Do List </h1>
         <input />
-        <button> Submit </button>
+        <button> Add </button>
         <div>
         <List />
         </div>
