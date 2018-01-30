@@ -60,13 +60,12 @@ it('has the correct dom elements', () => {
 it('makes sure all list items are removed', () => {
   const wrapper = shallow(<App />)
   const wrapper2 = mount(<List toDoListItems={ListMock} />)
-  console.log(wrapper2.props().toDoListItems)
   wrapper.find('#btn').simulate('click');
-  console.log(wrapper.state().toDoListItems)
+  wrapper2.unmount()
   expect(wrapper.state().toDoListItems).to.deep.equal([])
-
-  
 })
+
+
 
 })
 
