@@ -49,14 +49,14 @@ constructor(props){
   render() {
     return (
       <div className = 'user-input'>
-          <h1> To Do List </h1>
+          <h1 id = 'title'> To Do List </h1>
           <input id="user-input-value" value = {this.state.value} onChange = {this.handleChange}/>
-          <button id = 'submit-button' onClick = {this.handleSubmit}> Submit </button>
+          <button id = 'submit-button' onClick = {this.handleSubmit}> Add </button>
           <div className='list-items'>
             <List toDoListItems = {this.state.toDoListItems} handler={this.handler}/>
           </div>
           <div className = 'remove-button'>
-          <button id = 'btn'  onClick = {this.removeItems}> Remove All Items </button>
+          <button id = 'remove-button-stlye'  onClick = {this.removeItems}> Remove All Items </button>
           </div>  
       </div>
      

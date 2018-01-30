@@ -1,47 +1,29 @@
-
 .user-input{
-  text-align: center;
-  height: 300px;
+  font-family: 'Open Sans', sans-serif;
+  position:relative;
+  margin:0 auto;
+  clear:left;
+  height:auto;
+  z-index: 0;
+  text-align:center;/* Add This*/
 }
 
-.remove-button {
-  text-align: center;
-  margin: auto;
+.remove-button{
   position: relative;
-  padding: 20px;
+  margin-top: 20px;
+}
 
+#remove-button-stlye{
+  border-radius: 50px;
+  font-size: 15px;
+  color:#e20d2a;
+}
+
+
+#submit-button{
+border-radius: 50px;
 }
 
 .remove-item-btn{
-  text-align: center;
-  color:red;
-  position: relative;
   margin-left: 10px;
-}
-
-.list-items{
-  text-align: center;
-  position: relative;
-  padding: 20px;
-}
-
-#btn{
-  text-align: center;
-  color:red;
-  font-size: 15px;
-  margin-left: 35px;
-
-}
-
-#submit-button{
-  text-align: center;
-  color: #59a8f2;
-  position: relative;
-  margin-left: 15px;
-}
-
-#user-input-value{
-  text-align: center;
-  margin-left: 80px;
-  display: inline-block;
 }
