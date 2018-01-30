@@ -6,10 +6,13 @@ import ReactDOM from 'react-dom'
 import Adapter from 'enzyme-adapter-react-16'
 import Enzyme from 'enzyme'
 import List from '../src/List'
+import sinon ,{spy} from 'sinon'
+
 
 Enzyme.configure({ adapter: new Adapter() })
 
-const ListMock = ['item1', 'item2']
+const ListMock = ['item1']
+const handlerStub = spy()
 
 
 describe('The tests for the to do list', () => {
@@ -25,13 +28,6 @@ it('has the correct state elements', () => {
   const wrapper = shallow(<App />)
   expect(wrapper.state().value).to.equal("")
   expect(wrapper.state().toDoListItems).to.deep.equal([])
-})
-
-it('has the correct dom elements', () => {
-  const wrapper = shallow(<App />)
-  expect(wrapper.containsAllMatchingElements([
-    <input />
-  ])).to.equal(true)
 })
 
 it('has the correct div', () => {
@@ -51,7 +47,7 @@ it('has the correct dom elements', () => {
         <List />
         </div>
         <div>
-          <button> Remove Items </button>
+          <button> Remove All Items </button>
         </div>
   </div>
   ])).to.equal(true)
@@ -63,6 +59,16 @@ it('makes sure all list items are removed', () => {
   wrapper.find('#btn').simulate('click');
   wrapper2.unmount()
   expect(wrapper.state().toDoListItems).to.deep.equal([])
+})
+
+
+it('makes sure the handler method is called', () => {
+  const wrapper = shallow(<App />)
+  const wrapper2 = mount(<List toDoListItems={ListMock} handler={handlerStub} />)
+  console.log(wrapper.state().toDoListItems)
+  wrapper2.find('.remove-item-btn').simulate('click');
+  expect(wrapper.state().toDoListItems).to.deep.equal([])
+
 })
 
 

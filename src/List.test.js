@@ -25,12 +25,12 @@ describe('The tests for the to do list', () => {
 
     })
 
-    it('makes sure individual list items are removed', () => {
+    it('makes sure the handler method is called', () => {
         const wrapper = shallow(<App />)
         const wrapper2 = mount(<List toDoListItems={ListMock} handler={handlerStub} />)
-        console.log(wrapper2.props().toDoListItems)
         wrapper2.find('.remove-item-btn').simulate('click');
         expect(handlerStub).to.have.been.called
+        wrapper2.unmount()
       })
       
 

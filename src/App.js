@@ -54,7 +54,7 @@ constructor(props){
             <List toDoListItems = {this.state.toDoListItems} handler={this.handler}/>
           </div>
           <div className = 'remove-button'>
-          <button id = 'btn'  onClick = {this.removeItems}> Remove Items </button>
+          <button id = 'btn'  onClick = {this.removeItems}> Remove All Items </button>
           </div>  
       </div>
      
