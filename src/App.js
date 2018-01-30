@@ -25,11 +25,13 @@ constructor(props){
   }
 
   handleSubmit = (e) => {
+    if(this.state.value){
     this.setState({
       value: '',
       toDoListItems: [...this.state.toDoListItems, this.state.value]
     })
     e.preventDefault()
+  }
 
   }
 
