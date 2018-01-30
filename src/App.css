@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-
-}
 
 .user-input{
   text-align: center;
@@ -9,6 +5,7 @@
 }
 
 .remove-button {
+  text-align: center;
   margin: auto;
   position: relative;
   padding: 20px;
@@ -16,12 +13,35 @@
 }
 
 .remove-item-btn{
+  text-align: center;
   color:red;
+  position: relative;
+  margin-left: 10px;
+}
+
+.list-items{
+  text-align: center;
+  position: relative;
+  padding: 20px;
+}
+
+#btn{
+  text-align: center;
+  color:red;
+  font-size: 15px;
+  margin-left: 35px;
+
+}
+
+#submit-button{
+  text-align: center;
+  color: #59a8f2;
   position: relative;
   margin-left: 15px;
 }
 
-.list-items{
-  position: relative;
-  padding: 20px;
+#user-input-value{
+  text-align: center;
+  margin-left: 80px;
+  display: inline-block;
 }

@@ -50,8 +50,8 @@ constructor(props){
     return (
       <div className = 'user-input'>
           <h1> To Do List </h1>
-          <input value = {this.state.value} onChange = {this.handleChange}/>
-          <button onClick = {this.handleSubmit}> Submit </button>
+          <input id="user-input-value" value = {this.state.value} onChange = {this.handleChange}/>
+          <button id = 'submit-button' onClick = {this.handleSubmit}> Submit </button>
           <div className='list-items'>
             <List toDoListItems = {this.state.toDoListItems} handler={this.handler}/>
           </div>
