@@ -47,7 +47,9 @@ it('has the correct dom elements', () => {
      <h1> To Do List </h1>
         <input />
         <button> Submit </button>
+        <div>
         <List />
+        </div>
         <div>
           <button> Remove Items </button>
         </div>
