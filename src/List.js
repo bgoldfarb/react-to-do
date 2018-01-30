@@ -2,6 +2,11 @@ import React from 'react'
 import './App.css';
 
 
+const removeItem = (props,i) => {
+    if(i > -1){
+        props.handler(props.toDoListItems[i])
+    }
+}
 
 
 const List = (props) => {
@@ -9,8 +14,7 @@ const List = (props) => {
        props.toDoListItems.map((toDoListItems, i) => {
        return (
             <li key = {i}> {toDoListItems} 
-              <button className='remove-item-btn'> X </button>
-
+              <button onClick={() => removeItem(props,i)} className='remove-item-btn'> X </button>
              </li> 
              
             )

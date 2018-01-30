@@ -12,6 +12,12 @@ constructor(props){
     }
   }
 
+  handler = (items) => {
+    this.setState({
+      toDoListItems: this.state.toDoListItems.filter((i) => i !== items)
+    })
+  }
+
   handleChange = (e) => {
     this.setState({
       value: e.target.value
@@ -45,11 +51,11 @@ constructor(props){
           <input value = {this.state.value} onChange = {this.handleChange}/>
           <button onClick = {this.handleSubmit}> Submit </button>
           <div className='list-items'>
-            <List toDoListItems = {this.state.toDoListItems}/>
+            <List toDoListItems = {this.state.toDoListItems} handler={this.handler}/>
           </div>
           <div className = 'remove-button'>
           <button id = 'btn'  onClick = {this.removeItems}> Remove Items </button>
-          </div>
+          </div>  
       </div>
      
     );
