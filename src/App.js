@@ -44,7 +44,9 @@ constructor(props){
           <h1> To Do List </h1>
           <input value = {this.state.value} onChange = {this.handleChange}/>
           <button onClick = {this.handleSubmit}> Submit </button>
-          <List toDoListItems = {this.state.toDoListItems}/>
+          <div className='list-items'>
+            <List toDoListItems = {this.state.toDoListItems}/>
+          </div>
           <div className = 'remove-button'>
           <button id = 'btn'  onClick = {this.removeItems}> Remove Items </button>
           </div>

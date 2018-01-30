@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+
+}
+
+.user-input{
+  text-align: center;
+  height: 300px;
 }
 
 .remove-button {
@@ -13,4 +19,9 @@
   color:red;
   position: relative;
   margin-left: 15px;
+}
+
+.list-items{
+  position: relative;
+  padding: 20px;
 }
