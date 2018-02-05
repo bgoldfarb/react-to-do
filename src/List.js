@@ -12,17 +12,14 @@ const removeItem = (props,i) => {
 const List = (props) => {
     return(
        props.toDoListItems.map((toDoListItems, i) => {
+       console.log(toDoListItems)
        return (
             <ol key = {i}> {`${i+1}. `} {toDoListItems} 
               <button onClick={() => removeItem(props,i)} className='remove-item-btn'> X </button>
              </ol> 
-             
             )
-
        } 
-    
     )
-
 )
 }
 
