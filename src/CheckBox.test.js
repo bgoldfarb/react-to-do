@@ -23,6 +23,21 @@ it('has the correct div', () => {
     const wrapper = shallow(<CheckBox />)
     expect(wrapper.find('.check-box').exists()).to.equal(true)
   })
+
+  it('has the correct dom elements', () => {
+    const wrapper = shallow(<CheckBox />)
+    expect(wrapper.containsAllMatchingElements([
+     
+    <div>
+      <form>
+      <span>
+        <input/>
+        <label>Checkbox</label>
+      </span>
+        </form>
+    </div>
+    ])).to.equal(true)
+  })
   
 
 
