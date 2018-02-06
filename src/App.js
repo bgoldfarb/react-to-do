@@ -8,7 +8,8 @@ constructor(props){
   super(props)
     this.state = {
       value: '',
-      toDoListItems: []
+      toDoListItems: [],
+      checkBox: false
     }
   }
 
