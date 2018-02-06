@@ -15,8 +15,7 @@ describe('The tests for the to do list', () => {
     let wrapper;
     it('renders without crashing', () => {
         wrapper = shallow(<CheckBox/>)
-        expect(wrapper.find(List)).to.exist;
-
+        expect(wrapper.find(CheckBox)).to.exist;
     })
 
 
