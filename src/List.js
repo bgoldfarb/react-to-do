@@ -13,7 +13,7 @@ const List = (props) => {
        return (
             <ol key = {i}> {`${i+1}. `} {toDoListItems}  
               <button onClick={() => removeItem(props,i)} className='remove-item-btn'> X  </button>
-              <button  onClick={() => moveToComplete(props,i)} className='move-item-done'>> ✓ </button>
+              <button  onClick={() => moveToComplete(props,i)} className='move-item-done'> ✓ </button>
              </ol> 
             )
        } 
