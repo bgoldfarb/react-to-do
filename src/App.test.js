@@ -13,6 +13,7 @@ Enzyme.configure({ adapter: new Adapter() })
 
 const ListMock = ['item1']
 const handlerStub = spy()
+const moveToCompleteStub = spy()
 
 
 describe('The tests for the to do list', () => {
@@ -35,24 +36,6 @@ it('has the correct div', () => {
   expect(wrapper.find('.user-input').exists()).to.equal(true)
 })
 
-it('has the correct dom elements', () => {
-  const wrapper = shallow(<App />)
-  expect(wrapper.containsAllMatchingElements([
-   
-  <div>
-     <h1> To Do List </h1>
-        <input />
-        <button> Add </button>
-        <div>
-        <List />
-        </div>
-        <div>
-          <button> Remove All Items </button>
-        </div>
-  </div>
-  ])).to.equal(true)
-})
-
 it('makes sure all list items are removed', () => {
   const wrapper = shallow(<App />)
   const wrapper2 = mount(<List toDoListItems={ListMock} />)
@@ -65,11 +48,18 @@ it('makes sure all list items are removed', () => {
 it('makes sure the handler method is called', () => {
   const wrapper = shallow(<App />)
   const wrapper2 = mount(<List toDoListItems={ListMock} handler={handlerStub} />)
-  console.log(wrapper.state().toDoListItems)
   wrapper2.find('.remove-item-btn').simulate('click');
   expect(wrapper.state().toDoListItems).to.deep.equal([])
-
 })
+
+it('makes sure the moveToComplete method is called', () => {
+  const wrapper = shallow(<App />)
+  const wrapper2 = mount(<List toDoListItems={ListMock} handler={handlerStub} moveToComplete={moveToCompleteStub} />)
+  wrapper2.find('.move-item-done').simulate('click');
+  expect(wrapper.state().completedItems).to.deep.equal([])
+  wrapper2.unmount()
+})
+
 
 
 

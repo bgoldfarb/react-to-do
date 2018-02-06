@@ -15,6 +15,8 @@ Enzyme.configure({ adapter: new Adapter() })
 
 const ListMock = ['item1']
 const handlerStub = spy()
+const moveToCompleteStub = spy()
+
 
 describe('The tests for the to do list', () => {
     
@@ -27,9 +29,18 @@ describe('The tests for the to do list', () => {
 
     it('makes sure the handler method is called', () => {
         const wrapper = shallow(<App />)
-        const wrapper2 = mount(<List toDoListItems={ListMock} handler={handlerStub} />)
+        const wrapper2 = mount(<List toDoListItems={ListMock} handler={handlerStub}  moveToComplete={moveToCompleteStub}/>)
         wrapper2.find('.remove-item-btn').simulate('click');
         expect(handlerStub).to.have.been.called
+        wrapper2.unmount()
+      })
+      
+
+      it('makes sure the handler method is called', () => {
+        const wrapper = shallow(<App />)
+        const wrapper2 = mount(<List toDoListItems={ListMock} handler={handlerStub}  moveToComplete={moveToCompleteStub}/>)
+        wrapper2.find('.move-item-done').simulate('click');
+        expect(moveToCompleteStub).to.have.been.called
         wrapper2.unmount()
       })
       
