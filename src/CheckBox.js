@@ -8,7 +8,7 @@ import './App.css';
 
 const CheckBox = (props) => {
     return(
-        <div>
+        <div className = "check-box">
         
         </div>
        

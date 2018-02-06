@@ -19,4 +19,11 @@ describe('The tests for the to do list', () => {
     })
 
 
+it('has the correct div', () => {
+    const wrapper = shallow(<CheckBox />)
+    expect(wrapper.find('.check-box').exists()).to.equal(true)
+  })
+  
+
+
 })
