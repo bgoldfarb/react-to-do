@@ -30,7 +30,7 @@ it('has the correct state elements', () => {
   expect(wrapper.state().value).to.equal("")
   expect(wrapper.state().toDoListItems).to.deep.equal([])
 })
-
+//test
 it('has the correct div', () => {
   const wrapper = shallow(<App />)
   expect(wrapper.find('.user-input').exists()).to.equal(true)
